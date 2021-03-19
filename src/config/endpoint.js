@@ -1,0 +1,1 @@
+export const bannerEndpoint = "https://ksn-injured-api-heg56.ondigitalocean.app" //|| "http://localhost:4000"

@@ -1,0 +1,179 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+body{
+    position:relative;
+    height:auto;
+}
+
+.content{
+    max-height:75vh;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+.wrapper{
+    margin: 0 auto;
+    width:80vw;
+    padding-bottom : 4rem;
+
+}
+
+.table-banner,.table-banner th,.table-banner tr,.table-banner td{
+    margin-top : 1rem;
+    border:1px solid #000000;
+    border-collapse: collapse;
+}
+
+
+
+.mx-auto{
+    margin:0 auto;
+}
+
+.title
+{
+    width:10%;
+}
+
+.name{
+    width:30%;
+}
+
+.picture
+{
+    width:30%;
+}
+
+.action
+{
+    cursor: pointer;
+}
+
+.absolute{
+    position:absolute;
+}
+
+.previewImage
+{
+    width:40%;
+    height:auto;
+    margin:auto;
+}
+
+.uploadfile
+{
+    opacity:0;
+    position:absolute;
+    top:0;
+}
+
+.btn-wrapper
+{
+    margin-top:2rem;
+    text-align:right;
+    margin-right:1rem;
+}
+
+.btn-create
+{
+  
+    border-radius: 10px;
+    padding:1rem 0.5rem;
+    border:2px solid black;
+    background-color: rgba(0,200,200);
+}
+
+.editor-wrapper{
+    position:absolute;
+    margin:0 auto;
+    width:70%;
+    right:0;
+    top:0;
+}
+
+.wrapper,.wrapper>tbody{
+    position:relative;
+    width:90%;
+}
+
+.CkEditor{
+    background-color:white;
+    border:none;
+    position:absolute;
+    width:70%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    left:50%;
+    padding:1rem 1rem 0rem 1rem;
+    position:sticky;
+    border:2px solid black;
+    transform:translateX(-50%);
+    
+}
+
+.ck-editor{
+    margin:0 1rem;
+}
+
+
+
+.fileupload-groups{
+    position:absolute;
+}
+
+.input-groups{
+    text-align:left;
+   margin:1rem 0 1rem 1rem;
+    position: relative;
+}
+
+.first
+{
+    margin-top:1rem;
+}
+
+.CkEditor .preViewimg
+{
+    width:40%;
+    height:auto;
+}
+
+.close
+{
+    position:absolute;
+    top:0;
+    right:0;
+    margin-right:10%;
+    font-size:2rem;
+    color:black;
+    font-weight: bold;
+}
+.close>a{
+    text-decoration: none;
+
+}
+
+.ck-content{
+    min-height:200px;
+   
+}
+
+
+
+@media only screen and (max-width: 600px)
+{
+    .editor-wrapper{
+        width:90%;
+    }
+
+    .CkEditor{
+        left:auto;
+        right:0;
+        transform:translateX(0);
+        right:0;
+    }
+}
