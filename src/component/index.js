@@ -4,6 +4,7 @@ import axios from 'axios'
 import Editor from './editor'
 import './BannerCMS.css';
 import {bannerEndpoint} from '../config/endpoint'
+import Button from '@material-ui/core/Button'
 let prefixURL = bannerEndpoint
 
 export default function Dashboard()  {
@@ -62,13 +63,15 @@ export default function Dashboard()  {
                     isGuru={false} handleRefresh={handleRefresh}/>}
                     </tbody>
                   
-                </table><div className="btn-wrapper"><a href="#" target="__blank" className="btn-create mt-4 ml-auto border-2 p-4 rounded-lg bg-blue-400 text-white"
+                </table><div className="btn-wrapper"  >
+                <Button type="button"  varint="contained" 
                 onClick={(e) => {
                     e.preventDefault();
                     e.stopPropagation();
                     OnCreate(!create);
-                }
-            }>Create New Banner</a></div></>): "Loading"}
+                } }
+                >Create New Button</Button>
+                </div></>): "Loading"}
                 
                 
                 

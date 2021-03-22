@@ -5,6 +5,7 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import axios from 'axios';
 import {bannerEndpoint as prefixURL} from '../config/endpoint'
 import CheckType,{resolveType} from './checkType'
+import Button from '@material-ui/core/Button'
 function Editor({ content = null, featured_image_src = null, orderNO = null, titleTHOutput = null, url = null, isiframe = false, id = null ,setShow,isGuru,handleRefresh}) {
     const [newContent, SetContent] = useState(content);
     const [picture, setPicture] = useState(featured_image_src || 'No file selected');
@@ -22,7 +23,7 @@ function Editor({ content = null, featured_image_src = null, orderNO = null, tit
         if(!e.target.files[0]) return;
         
             const form = new FormData()
-            form.append('previewImage', e.target.files[0])
+            form.append('previewImage', e.target.files[0]) 
             const { data } = await axios.post(prefixURL + '/upload/previewImage',
                 form,
                 {
@@ -91,7 +92,6 @@ function Editor({ content = null, featured_image_src = null, orderNO = null, tit
                         name="previewImage"
                         placeholder="test"
                         accept="image/jpeg,image/png,image/gif,image/bmp,image/webp,image/tiff"
-                        onClick={()=>console.log('im clicked')}
                         onChange={(e) => { getPreviewImage(e); }}
                         className="focus:outline-none focus:ring focus:border-blue-300 opacity-0 relative uploadfile" />
                     <div className="top-0 left-0"><a href="#" className="text-blue-400 border hover:text-blue-200 rounded-lg px-2">
@@ -101,7 +101,6 @@ function Editor({ content = null, featured_image_src = null, orderNO = null, tit
                     (<div id="preview" className="w-1/4 h-auto ml-10 mb-4 input-groups">
                         <img className="w-auto h-auto preViewimg" src={`${picture}`} />
                     </div>
-
                     ) : null}
                 <div className="m-auto flex justify-items-center align-items-center input-groups">
                     <label className="mt-3 inline-flex items-center cursor-pointer pr-4">
@@ -158,7 +157,7 @@ function Editor({ content = null, featured_image_src = null, orderNO = null, tit
                         console.log('Focus.', editor);
                     }}
                 />
-
+                <Button type="button" variant="contained" color="primary">Save</Button>
                 <button type="button" className="bg-white border-none rounded-md mt-4 py-2 px-4 float-right " onClick={(e) => { e.preventDefault(); handleUpload() }} >Save</button>
             </div>
         </div>
