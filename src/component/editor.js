@@ -157,7 +157,7 @@ function Editor({ content = null, featured_image_src = null, orderNO = null, tit
                         console.log('Focus.', editor);
                     }}
                 />
-                <Button type="button" variant="contained" color="primary">Save</Button>
+                {/* <Button type="button" variant="contained" color="primary">Save</Button> */}
                 <button type="button" className="bg-white border-none rounded-md mt-4 py-2 px-4 float-right " onClick={(e) => { e.preventDefault(); handleUpload() }} >Save</button>
             </div>
         </div>

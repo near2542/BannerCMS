@@ -47,7 +47,7 @@ export default function Dashboard()  {
         <div className="relative">
             <div className="wrapper">
                 <h1 >BannerCMS</h1>
-                {curData.length>0? (
+                {curData? (
                     <>
                 <table className="w-4/5 mt-16 table-banner mx-auto border wrapper">
                     <thead>
